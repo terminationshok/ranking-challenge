@@ -25,15 +25,15 @@ def generate_rankings(items):
         messages=[
             {
                 "role": "system",
-                "content": 'You are a helpful assistant that processes text and returns results in JSON format. Reorder the items you are given in terms of their positivity, with the most positive item first, and include your reasoning. Give me a JSON array in the following format: [ {"item_idx": int, "reason": str} ]',
+                "content": 'You are a helpful assistant that processes text and returns results in JSON format. Reorder the items you are given in terms of their political content, with the most political item first, and include your reasoning. Give me a JSON array in the following format: [ {"item_idx": int, "reason": str} ]',
             },
             {
                 "role": "user",
-                "content": "ITEM 0:\nI love you.\n\nITEM 1:\nI hate you.\n\nITEM 2:\nI am indifferent to you.\nITEM 3:\nI like soup\n\n",
+                "content": "ITEM 0:\nPeople who voted differently than me should die.\n\nITEM 1:\nThe President Sucks.\n\nITEM 2:\nI am indifferent to you.\nITEM 3:\nI like soup\n\n",
             },
             {
                 "role": "assistant",
-                "content": '[ {"item_idx": 0, "reason": "The statement is very positive."}, {"item_idx": 3, "reason": "The statement is somewhat positive."}, {"item_idx": 2, "reason": "The statement is neutral."}, {"item_idx": 1, "reason": "The statement is negative."} ]',
+                "content": '[ {"item_idx": 0, "reason": "The statement is very political."}, {"item_idx": 3, "reason": "The statement is somewhat political."}, {"item_idx": 2, "reason": "The statement is neutral."}, {"item_idx": 1, "reason": "The statement is not political."} ]',
             },
             {
                 "role": "user",
