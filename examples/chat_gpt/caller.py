@@ -12,7 +12,8 @@ import sample_data
 time.sleep(2)
 
 # Send POST request to the API
-response = requests.post("http://localhost:5001/rank", json=sample_data.CHATGPT_EXAMPLE)
+#response = requests.post("http://localhost:5001/rank", json=sample_data.CHATGPT_EXAMPLE)
+response = requests.post("https://prosocial.kokoro.science/api/v1/rank", json=sample_data.CHATGPT_EXAMPLE)
 
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
